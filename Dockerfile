@@ -6,9 +6,9 @@ RUN apk --update add \
     curl \
     tzdata \
     ca-certificates \
-    && rm -rf /var/cache/apk/* \
+    && rm -rf /var/cache/apk/*
 
-    ENV TZ=Asia/Jakarta
+ENV TZ=Asia/Jakarta
 
 ADD bin/cicd /
 

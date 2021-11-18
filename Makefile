@@ -13,7 +13,7 @@ $(executable):
 
 build:
 	@echo Building $(executable)
-	GOOS=linux go build -o bin/$(executable) cmd/$(executable)/main.go
+	GOOS=linux CGO_ENABLED=0 go build -o bin/$(executable) cmd/$(executable)/main.go
 	docker build -t edchristiand/test-cicd -f Dockerfile .
 
 fmt:
